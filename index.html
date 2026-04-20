@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPS（Individual Placement and Support）働く旅路の革命</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header .subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        header .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* セクション共通 */
+        section {
+            padding: 60px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        section h3 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            color: #444;
+        }
+
+        section p {
+            font-size: 17px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* アイコン */
+        .icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* 比較レイアウト */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .comparison-item {
+            padding: 30px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .comparison-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .traditional {
+            background: #f5f5f5;
+            border: 2px solid #9e9e9e;
+        }
+
+        .ips {
+            background: linear-gradient(135deg, #e3f2fd 0%, #e0f7fa 100%);
+            border: 2px solid #2196F3;
+        }
+
+        .comparison-item h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid currentColor;
+        }
+
+        .traditional h4 {
+            color: #757575;
+        }
+
+        .ips h4 {
+            color: #2196F3;
+        }
+
+        .comparison-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .comparison-item li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .comparison-item li:before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .traditional li:before {
+            color: #757575;
+        }
+
+        .ips li:before {
+            color: #2196F3;
+        }
+
+        /* 原則ボックス */
+        .principle-box {
+            background: linear-gradient(135deg, #fff9e6 0%, #ffe4b3 100%);
+            border-left: 5px solid #FF9800;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .principle-box h4 {
+            color: #FF6F00;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .principle-box h4:before {
+            content: '📋';
+            font-size: 20px;
+        }
+
+        /* タイムライン */
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+            margin: 40px 0;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        /* 統計カード */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* 課題ボックス */
+        .challenge-box {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .challenge-box h4 {
+            color: #e65100;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .challenge-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .challenge-box li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .challenge-box li:before {
+            content: '⚠';
+            position: absolute;
+            left: 0;
+            color: #ff9800;
+        }
+
+        /* リソースリンク */
+        .resource-links {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .resource-links h4 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .resource-links a {
+            display: block;
+            color: #2196F3;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .resource-links a:hover {
+            background: white;
+            text-decoration: underline;
+        }
+
+        /* フッター */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        /* バーグラフ */
+        .bar-chart {
+            margin: 40px 0;
+        }
+
+        .bar-item {
+            margin: 25px 0;
+        }
+
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .bar-bg {
+            background: #e0e0e0;
+            height: 35px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            color: white;
+            font-weight: bold;
+            transition: width 1s ease;
+        }
+
+        .bar-ips {
+            background: linear-gradient(90deg, #2196F3 0%, #00BCD4 100%);
+        }
+
+        .bar-traditional {
+            background: linear-gradient(90deg, #757575 0%, #9e9e9e 100%);
+        }
+
+        /* キーポイント */
+        .key-point {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border-left: 5px solid #3f51b5;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .key-point p {
+            margin: 0;
+            color: #1a237e;
+            font-weight: 500;
+        }
+
+        /* パスメタファー */
+        .path-visual {
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .path-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .path {
+            flex: 1;
+            text-align: center;
+        }
+
+        .path-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .path-traditional .path-icon {
+            background: #e0e0e0;
+            border: 4px solid #9e9e9e;
+        }
+
+        .path-ips .path-icon {
+            background: linear-gradient(135deg, #2196F3 0%, #00BCD4 100%);
+            border: 4px solid #0277BD;
+        }
+
+        .path h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .path-traditional h4 {
+            color: #757575;
+        }
+
+        .path-ips h4 {
+            color: #2196F3;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            header .subtitle {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            section h2 {
+                font-size: 26px;
+            }
+
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .path-container {
+                flex-direction: column;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* アニメーション */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <header>
+            <h1>IPS（Individual Placement and Support)</h1>
+            <div class="subtitle">働く旅路の革命</div>
+            <div class="tagline">
+                「準備してから働く」から「働きながら成長する」へ<br>
+                精神障害のある方の就労支援を根本から変えるアプローチ
+            </div>
+        </header>
+
+        <!-- セクション1: 二つの道 -->
+        <section id="two-paths">
+            <h2>
+                <div class="icon">1</div>
+                オープニング：2つの道
+            </h2>
+            
+            <p>
+                同じ「働きたい」という希望から始まっても、たどる道は大きく異なります。
+            </p>
+
+            <div style="background: white; padding: 25px; border-radius: 12px; margin: 30px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <h3 style="color: #667eea; margin-bottom: 15px; margin-top: 0;">IPSとは？</h3>
+                <p style="margin-bottom: 0;">
+                    <strong>IPS（Individual Placement and Support）</strong>は、「個別就労支援プログラム」または「援助付き雇用」と呼ばれる、精神障害のある方のための就労支援モデルです。1990年代初頭にアメリカで開発され、世界20カ国以上で実践されています。最大の特徴は、「働きたい」と思ったその時から、就職活動と職場定着を同時に支援する点です。
+                </p>
+            </div>
+
+            <div class="path-visual">
+                <div class="path-container">
+                    <div class="path path-traditional">
+                        <div class="path-icon">🚶</div>
+                        <h4>従来の道</h4>
+                        <p>準備してから走る<br><strong>Train then Place</strong></p>
+                    </div>
+                    
+                    <div style="font-size: 48px; color: #999;">vs</div>
+                    
+                    <div class="path path-ips">
+                        <div class="path-icon">🏃</div>
+                        <h4>IPSの道</h4>
+                        <p>走りながら準備する<br><strong>Place then Train</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-point">
+                <p>
+                    <strong>核心の違い：</strong>従来の支援は「準備が整うまで待つ」のに対し、IPSは「働きたいという熱意がある今、すぐにスタートする」という信念に基づいています。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション2: 除外基準なし -->
+        <section id="zero-exclusion">
+            <h2>
+                <div class="icon">2</div>
+                スタート地点：希望があれば今すぐ
+            </h2>
+
+            <div class="principle-box">
+                <h4>原則① 除外基準なし（Zero Exclusion / ゼロ・エクスクルージョン）</h4>
+                <p>「働きたい」という希望さえあれば、病状の重さや準備状況に関わらず、誰でも支援を受けられます。</p>
+            </div>
+
+            <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; font-size: 15px;">
+                <strong style="color: #e65100;">以下のような理由で支援を断ることは許されません：</strong>
+                <ul style="margin-top: 10px; color: #555;">
+                    <li>症状の重さや診断名</li>
+                    <li>薬物やアルコールの使用歴</li>
+                    <li>過去の暴力的な行動歴や刑事罰の経歴</li>
+                    <li>認知機能の障害</li>
+                    <li>治療への非協力的な態度（服薬拒否など）</li>
+                    <li>身なりや対人スキルの不足</li>
+                </ul>
+                <p style="margin-top: 15px; margin-bottom: 0; color: #333;">
+                    <strong>唯一の条件は「本人の働きたいという意欲」だけです。</strong>
+                </p>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-item traditional">
+                    <h4>従来の支援</h4>
+                    <ul>
+                        <li>「まだ病状が安定していない」</li>
+                        <li>「生活リズムが整ってから」</li>
+                        <li>「もう少し訓練を積んでから」</li>
+                        <li>準備期間：通常6〜12ヶ月</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item ips">
+                    <h4>IPSの支援</h4>
+                    <ul>
+                        <li>「働きたい」という気持ちを最優先</li>
+                        <li>病状や準備状況で断らない</li>
+                        <li>すぐに求職活動を開始</li>
+                        <li>開始まで：通常1ヶ月以内</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>
+                多くの方が、「準備」という名の待機期間で意欲を失ってしまいます。IPSは、その「今、働きたい」という貴重な熱意を逃しません。
+            </p>
+        </section>
+
+        <!-- セクション3: チーム結成 -->
+        <section id="integrated-team">
+            <h2>
+                <div class="icon">3</div>
+                チーム結成：一人で戦わない
+            </h2>
+
+            <div class="principle-box">
+                <h4>原則③ 医療と就労支援の統合（Integration）</h4>
+                <p>就労支援員が医療チームの一員として、主治医・看護師・PSW（精神保健福祉士）と密に連携します。</p>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-item traditional">
+                    <h4>従来の支援</h4>
+                    <ul>
+                        <li>医療機関と就労支援機関が別々</li>
+                        <li>情報共有が限定的</li>
+                        <li>連携に時間がかかる</li>
+                        <li>本人が間を取り持つ負担</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item ips">
+                    <h4>IPSの支援</h4>
+                    <ul>
+                        <li>就労支援員が医療チームに参加</li>
+                        <li>定期的なカンファレンスで情報共有</li>
+                        <li>医学的視点と職業的視点の融合</li>
+                        <li>迅速で一貫したサポート</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-point">
+                <p>
+                    <strong>なぜ統合が重要？</strong> 働く上での課題は、医療的な側面と職業的な側面が複雑に絡み合っています。チームで支えることで、どちらの視点も見逃しません。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション4: あなたの好きを仕事に -->
+        <section id="preferences">
+            <h2>
+                <div class="icon">4</div>
+                求職活動：あなたの「好き」を仕事に
+            </h2>
+
+            <div class="principle-box">
+                <h4>原則④ 本人の好みを重視（Worker Preferences）</h4>
+                <p>支援者が「向いている」と判断するのではなく、本人の興味・強み・経験に基づいて仕事を探します。</p>
+            </div>
+
+            <div class="principle-box">
+                <h4>原則⑦ 体系的な求人開拓（Systematic Job Development）</h4>
+                <p>ハローワークの求人を待つだけでなく、支援員が企業に直接アプローチし、本人に合った仕事を開拓します。</p>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-item traditional">
+                    <h4>従来の支援</h4>
+                    <ul>
+                        <li>「できそうな仕事」を提案</li>
+                        <li>既存の求人から選択</li>
+                        <li>障害者枠の限定された選択肢</li>
+                        <li>画一的なマッチング</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item ips">
+                    <h4>IPSの支援</h4>
+                    <ul>
+                        <li>「やりたい仕事」を追求</li>
+                        <li>企業を直接訪問して開拓</li>
+                        <li>一般就労を含む幅広い選択肢</li>
+                        <li>完全個別化されたマッチング</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>
+                実際の就職先は多種多様です：IT企業の事務、経理・人事、農業、飲食店のホール、運送会社のサポート、大学の研究室事務、など。本人の「好き」が出発点です。
+            </p>
+        </section>
+
+        <!-- セクション5: 迅速な行動 -->
+        <section id="rapid-start">
+            <h2>
+                <div class="icon">5</div>
+                迅速な行動：熱意が冷めないうちに
+            </h2>
+
+            <div class="principle-box">
+                <h4>原則⑥ 迅速な就職活動（Rapid Job Search）</h4>
+                <p>長い事前訓練やアセスメントは行わず、プログラム開始後、<strong>平均30日以内</strong>に雇用主へのファーストコンタクトを開始します。</p>
+            </div>
+
+            <div class="key-point" style="margin-bottom: 30px;">
+                <p>
+                    <strong>なぜ30日以内なのか？</strong> 長すぎる待機期間は、モチベーションを削り、不安を増幅させます。「働きたい」という熱意が冷めないうちに、実際の行動に移すことが回復への原動力になります。
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>従来の支援のタイムライン（一般的な例）</h4>
+                    <p><strong>0-3ヶ月：</strong> アセスメント・評価、基礎訓練</p>
+                    <p><strong>3-6ヶ月：</strong> 作業訓練・スキル習得</p>
+                    <p><strong>6-9ヶ月：</strong> 職業準備訓練・企業実習</p>
+                    <p><strong>9-12ヶ月：</strong> 求職活動開始</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>IPSのタイムライン</h4>
+                    <p><strong>0-1週間：</strong> 初回面談・希望の聞き取り</p>
+                    <p><strong>1-4週間：</strong> 求職活動開始</p>
+                    <p><strong>継続：</strong> 働きながら必要なスキルを習得</p>
+                </div>
+            </div>
+
+            <div class="key-point">
+                <p>
+                    <strong>なぜ迅速さが重要？</strong> 「働きたい」という意欲は時間とともに減少します。長い待機期間は、自己効力感の低下や症状の悪化につながる可能性があります。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション6: 職場で成長 -->
+        <section id="competitive-employment">
+            <h2>
+                <div class="icon">6</div>
+                職場で成長：実践が最高の訓練
+            </h2>
+
+            <div class="principle-box">
+                <h4>原則② 一般就労を目指す（Competitive Employment）</h4>
+                <p>障害者だけの作業所ではなく、一般企業で誰もが働く職場を目指します。最低賃金以上が保証される仕事です。</p>
+            </div>
+
+            <p style="font-size: 15px; color: #666; margin-top: -15px; margin-bottom: 20px;">
+                <strong>用語解説：</strong>「競争的雇用（Competitive Employment）」とは、障害の有無に関わらず、同じ環境で働き、同じ労働基準が適用される一般就労のこと。日本の就労継続支援A型・B型は、この定義には含まれません。
+            </p>
+
+            <div class="comparison">
+                <div class="comparison-item traditional">
+                    <h4>従来の支援</h4>
+                    <ul>
+                        <li>施設内での作業訓練</li>
+                        <li>模擬的な職場体験</li>
+                        <li>就労継続支援A型・B型が主流</li>
+                        <li>工賃：月額約16,000円（B型）</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item ips">
+                    <h4>IPSの支援</h4>
+                    <ul>
+                        <li>実際の職場で働く</li>
+                        <li>リアルな経験から学ぶ</li>
+                        <li>一般企業への就職</li>
+                        <li>賃金：最低賃金以上</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>
+                「訓練の場」と「実際の職場」のギャップは大きいものです。IPSでは、実際の職場で働きながら、必要なスキルを習得していきます。支援員は職場を訪問し、本人と企業の双方をサポートします。
+            </p>
+        </section>
+
+        <!-- セクション7: 経済的安心 -->
+        <section id="benefits-counseling">
+            <h2>
+                <div class="icon">7</div>
+                経済的安心：働くことへの不安をなくす
+            </h2>
+
+            <div class="principle-box">
+                <h4>原則⑤ 個別化された給付相談（Personalized Benefits Counseling）</h4>
+                <p>「働くと障害年金が減るのでは？」という経済的な不安に対し、専門的なアドバイスを提供します。</p>
+            </div>
+
+            <p>
+                多くの方が抱える不安：
+            </p>
+            <ul style="list-style: none; padding-left: 20px;">
+                <li style="margin: 10px 0;">💰 障害年金はどうなる？</li>
+                <li style="margin: 10px 0;">💰 医療費の助成は継続できる？</li>
+                <li style="margin: 10px 0;">💰 どれくらい働けば生活が安定する？</li>
+                <li style="margin: 10px 0;">💰 税金や社会保険はどうなる？</li>
+            </ul>
+
+            <p>
+                IPSでは、給付金や年金の専門家が個別に相談に応じ、収入シミュレーションを提供します。「働くと損をする」という誤解を解き、安心して一歩を踏み出せるようサポートします。
+            </p>
+        </section>
+
+        <!-- セクション8: 継続的な伴走 -->
+        <section id="ongoing-support">
+            <h2>
+                <div class="icon">8</div>
+                継続的な伴走：終わりのないサポート
+            </h2>
+
+            <div class="principle-box">
+                <h4>原則⑧ 継続的な支援（Time-Unlimited Support）</h4>
+                <p>「就職したら終わり」ではありません。必要な限り、いつまでもサポートを続けます。</p>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-item traditional">
+                    <h4>従来の支援</h4>
+                    <ul>
+                        <li>就職後6ヶ月でサポート終了</li>
+                        <li>定着支援は別のサービス</li>
+                        <li>再度の支援は新規申請が必要</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item ips">
+                    <h4>IPSの支援</h4>
+                    <ul>
+                        <li>期限なしのサポート</li>
+                        <li>就職後も同じ支援員が継続</li>
+                        <li>転職や復職も柔軟に対応</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>
+                働き続ける中で、環境の変化や症状の変動があるのは自然なことです。IPSの支援員は、職場訪問や定期面談を通じて、長期的に伴走します。困ったときにはいつでも相談できる安心感が、継続就労を支えます。
+            </p>
+
+            <div class="key-point">
+                <p>
+                    <strong>「失敗」ではなく「プロセス」として捉える：</strong> IPSでは、職を変えることを「通常のプロセス」と考えます。たとえ仕事が続かなくても、すぐに次の職を一緒に探す粘り強い伴走体制があります。「すぐ動く、失敗してもまたすぐ動く」このリズムが、自尊心を支えます。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション9: エビデンス -->
+        <section id="evidence">
+            <h2>
+                <div class="icon">9</div>
+                エビデンス：なぜこれほど効果的なのか
+            </h2>
+
+            <p>
+                IPSは、世界中で科学的に効果が実証されている数少ない就労支援モデルです。
+            </p>
+
+            <p style="font-size: 15px; color: #666; margin-bottom: 30px;">
+                <strong>データ出典：</strong> Bond GR et al. (2012) による15の研究のメタ分析。IPS利用者1,063人と非IPS利用者1,117人を比較した結果。
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">58.9%</div>
+                    <div class="stat-label">IPS利用者の一般就労率</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">23.2%</div>
+                    <div class="stat-label">従来型支援の一般就労率</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">2倍以上</div>
+                    <div class="stat-label">IPSの方が就職率が高い</div>
+                </div>
+            </div>
+
+            <div class="bar-chart">
+                <div class="bar-item">
+                    <div class="bar-label">
+                        <span>IPS利用者の一般就労率</span>
+                        <span>58.9%</span>
+                    </div>
+                    <div class="bar-bg">
+                        <div class="bar-fill bar-ips" style="width: 58.9%;">58.9%</div>
+                    </div>
+                </div>
+
+                <div class="bar-item">
+                    <div class="bar-label">
+                        <span>従来型支援の一般就労率</span>
+                        <span>23.2%</span>
+                    </div>
+                    <div class="bar-bg">
+                        <div class="bar-fill bar-traditional" style="width: 23.2%;">23.2%</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>研究の信頼性</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin: 15px 0; padding: 15px; background: #f5f5f5; border-radius: 8px;">
+                    📊 <strong>25以上のランダム化比較試験（RCT）</strong>で効果を実証
+                </li>
+                <li style="margin: 15px 0; padding: 15px; background: #f5f5f5; border-radius: 8px;">
+                    🌍 <strong>20カ国以上</strong>で実践され、効果が確認されている
+                </li>
+                <li style="margin: 15px 0; padding: 15px; background: #f5f5f5; border-radius: 8px;">
+                    📈 就職率だけでなく、<strong>就労期間・収入・生活の質</strong>も向上
+                </li>
+                <li style="margin: 15px 0; padding: 15px; background: #f5f5f5; border-radius: 8px;">
+                    🏥 <strong>再発による入院が減少</strong>し、医療費削減効果も報告されている
+                </li>
+            </ul>
+
+            <div class="key-point">
+                <p>
+                    <strong>なぜIPSは効果的なのか？</strong> 「働きたい」という意欲を最大限活用し、実際の職場での経験を通じて自己効力感を高める。医療と就労の統合により、包括的なサポートが可能になる。これらが相乗効果を生み出します。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション10: 日本の現在地 -->
+        <section id="japan-current">
+            <h2>
+                <div class="icon">10</div>
+                日本の現在地：希望と課題
+            </h2>
+
+            <h3>IPSの歴史</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin: 12px 0;">📅 <strong>1990年代初頭：</strong> アメリカ・ダートマス大学で開発（Robert Drake、Gary Bond、Deborah Becker）</li>
+                <li style="margin: 12px 0;">📅 <strong>2005年：</strong> 日本で初の試験導入（千葉県市川市）</li>
+                <li style="margin: 12px 0;">📅 <strong>2013年：</strong> 障害者雇用促進法改正で注目が高まる</li>
+                <li style="margin: 12px 0;">📅 <strong>現在：</strong> 全国約20箇所で実践中</li>
+            </ul>
+
+            <h3>追い風：超短時間労働の制度化</h3>
+            <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 25px; border-radius: 12px; margin: 30px 0;">
+                <p style="margin-bottom: 15px;">
+                    <strong style="color: #2e7d32; font-size: 18px;">2024年4月から、週10時間以上20時間未満の「超短時間労働」が障害者雇用率の算定対象に</strong>
+                </p>
+                <p style="margin-bottom: 0; color: #555;">
+                    これまで「週20時間は難しい」と社会の枠組みから切り捨てられていた層へ、初めて正面から光を当てる歴史的な転換です。いきなりフルタイムではなく、まずは週10時間から社会とつながる。まさにIPS的な「リカバリーへの第一歩」を制度が後押しし始めました。
+                </p>
+            </div>
+
+            <h3>日本の実践施設（一部）</h3>
+            <ul style="list-style: none; padding-left: 0; column-count: 2; column-gap: 30px;">
+                <li style="margin: 8px 0;">• リスタ八王子（東京）</li>
+                <li style="margin: 8px 0;">• ビルド市川（千葉）</li>
+                <li style="margin: 8px 0;">• 桜ヶ丘記念病院（東京）</li>
+                <li style="margin: 8px 0;">• すみよし障がい者就業・生活支援センター（山梨）</li>
+                <li style="margin: 8px 0;">• ワンモア豊中（大阪）</li>
+                <li style="margin: 8px 0;">• 希望ヶ丘ホスピタル（岡山）</li>
+            </ul>
+
+            <div class="challenge-box">
+                <h4>日本における課題</h4>
+                <ul>
+                    <li><strong>制度・財源の未整備：</strong> IPSに特化した診療報酬や福祉制度がない</li>
+                    <li><strong>既存制度との調整：</strong> デイケア、訪問看護、就労移行支援など、既存制度を組み合わせて実施</li>
+                    <li><strong>支援者のトレーニング：</strong> 8つの原則を守るための専門的な研修が必要</li>
+                    <li><strong>企業側の理解：</strong> 障害者雇用の理解促進と、柔軟な受け入れ体制が課題</li>
+                    <li><strong>普及の遅れ：</strong> 科学的効果は証明されているが、日本での普及は限定的</li>
+                </ul>
+            </div>
+
+            <p>
+                日本では、就労移行支援や就労継続支援A型・B型といった既存制度が主流です。これらとIPSの関係を理解することが重要です。
+            </p>
+
+            <div style="background: #f5f5f5; padding: 25px; border-radius: 12px; margin: 30px 0;">
+                <h4 style="color: #667eea; margin-bottom: 20px;">日本の主な就労支援制度</h4>
+                
+                <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                    <strong>就労移行支援</strong><br>
+                    <span style="font-size: 15px; color: #666;">
+                    一般企業への就職を目指して、2年間の訓練を受ける。訓練中心のアプローチで、賃金は発生しない。就職率：約50%
+                    </span>
+                </div>
+
+                <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                    <strong>就労継続支援A型</strong><br>
+                    <span style="font-size: 15px; color: #666;">
+                    福祉事業所と雇用契約を結び働く。最低賃金以上の給与あり。一般就労への移行率：約25%
+                    </span>
+                </div>
+
+                <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                    <strong>就労継続支援B型</strong><br>
+                    <span style="font-size: 15px; color: #666;">
+                    雇用契約なしで福祉事業所で働く。工賃は月額約16,000円。一般就労への移行率：約13%
+                    </span>
+                </div>
+
+                <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                    <strong>IPS</strong><br>
+                    <span style="font-size: 15px; color: #666;">
+                    訓練期間なしで一般企業への就職を目指す。働きながら成長する。一般就労率：約59%（世界平均）
+                    </span>
+                </div>
+            </div>
+
+            <p>
+                IPSの普及には、制度設計の見直しや、支援者の育成が不可欠です。現在は、既存制度（デイケア、訪問看護、就労移行支援など）を組み合わせてIPSの理念を実践している施設が多いです。
+            </p>
+        </section>
+
+        <!-- セクション11: 批判的視点 -->
+        <section id="critical-view">
+            <h2>
+                <div class="icon">11</div>
+                批判的視点：IPSは万能ではない
+            </h2>
+
+            <p>
+                IPSは強力な支援モデルですが、すべての人、すべての状況に完璧に合うわけではありません。
+            </p>
+
+            <div class="challenge-box">
+                <h4>IPSの限界と注意点</h4>
+                <ul>
+                    <li><strong>個人差：</strong> すぐに就職活動を始めることが、すべての人にとって最適とは限らない</li>
+                    <li><strong>失敗のリスク：</strong> 早期の就職が失敗した場合、自信を失う可能性もある</li>
+                    <li><strong>企業側の負担：</strong> 受け入れ企業には、柔軟性と理解が求められる</li>
+                    <li><strong>支援者の質：</strong> 8つの原則を守るには、高い専門性とトレーニングが必要</li>
+                    <li><strong>制度の壁：</strong> 日本では、既存制度との整合性が課題</li>
+                </ul>
+            </div>
+
+            <p>
+                IPSは「働きたい」という希望を持つすべての人に開かれていますが、本人のペースや状況に合わせた柔軟な対応が重要です。また、従来型の支援（就労移行支援など）が合う方もいます。
+            </p>
+
+            <div class="key-point">
+                <p>
+                    <strong>大切なのは選択肢があること：</strong> IPSも従来型支援も、それぞれ強みがあります。自分に合った支援を選べる環境が理想です。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション12: クロージング -->
+        <section id="closing">
+            <h2>
+                <div class="icon">12</div>
+                あなたの「働きたい」から始まる
+            </h2>
+
+            <p style="font-size: 18px; line-height: 2;">
+                IPSの本質は、<strong>「信じる」</strong>ことです。<br>
+                どんなに重い精神障害があっても、<br>
+                「働きたい」という希望さえあれば、<br>
+                その人に合った職場で働くことができる。<br><br>
+                
+                そして、働くこと自体が治療的であり、<br>
+                リカバリー（回復）の重要な要素となる。<br><br>
+                
+                この信念が、IPSを支えています。
+            </p>
+
+            <div style="background: #fff9e6; border-left: 5px solid #ff9800; padding: 25px; margin: 40px 0; border-radius: 8px;">
+                <h3 style="color: #e65100; margin-top: 0; margin-bottom: 15px;">「愛ゆえのブレーキ」を外す勇気</h3>
+                <p style="margin-bottom: 15px; color: #555;">
+                    家族や支援者が「まずは体調を万全にしてから」「体力がついてから考えましょう」と言うのは、紛れもなく本人を想う愛情からです。しかし、この温かな配慮が、皮肉にも回復の機会を奪っているとしたらどうでしょうか。
+                </p>
+                <p style="margin-bottom: 0; color: #555;">
+                    職場を<strong>「完治してから来るべき場所」</strong>として閉ざすのか、それとも<strong>「共に働きながら、共に回復していく場所」</strong>として開放するのか。私たちの意識が、今、問われています。
+                </p>
+            </div>
+
+            <div class="resource-links">
+                <h4>さらに詳しく知りたい方へ</h4>
+                <a href="https://note.com/kazunewjumpshot/n/n4d74e7817243" target="_blank">【当事者の視点】「治してから働く」はもう古い？IPSモデルの正体（note / kazu）</a>
+                <a href="https://cocokura.ncnp.go.jp/work/technique-ips/" target="_blank">国立精神・神経医療研究センター：援助付き雇用／個別就労支援プログラム</a>
+                <a href="https://papageno.co.jp/ips/" target="_blank">パパゲーノ：IPS援助付き雇用とは？</a>
+                <a href="https://jipsa.jp/" target="_blank">JIPSA（日本IPS協会）：全国のIPSチーム</a>
+                <a href="https://ipsworks.org/" target="_blank">IPS Employment Center（英語）：世界のIPS情報</a>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer>
+            <p>&copy; 2025 IPS Infographic | Created for educational purposes</p>
+            <p style="margin-top: 10px; font-size: 14px;">
+                この図解は、厚生労働省、国立精神・神経医療研究センター、各種学術論文などの公開情報を基に作成しました。
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // バーグラフのアニメーション
+        window.addEventListener('load', function() {
+            const bars = document.querySelectorAll('.bar-fill');
+            bars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
